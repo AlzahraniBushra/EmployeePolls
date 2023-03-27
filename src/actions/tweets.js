@@ -12,6 +12,17 @@ function addTweet(tweet) {
   };
 }
 
+//function addAnswer({authedUser, qid, answer}){
+  //return{
+  //  type: ANSWER_QUESTION,
+   // 
+//
+  //}
+//}
+
+
+
+
 export function handleAddTweet(text, replyingTo) {
   return (dispatch, getState) => {
     const { authedUser } = getState();
