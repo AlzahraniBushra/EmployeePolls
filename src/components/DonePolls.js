@@ -20,33 +20,41 @@ const AnsweredPoll = (props) => {
                 <div
                     className="radiobuttons"
                     >
-                    <div >
+                    
                         <span />
                         {optionOne.text}
 
                         <p> or</p>
-                    </div>{" "}
-                    <div >
+                     {" "}
+                     
                         <span  />
                         {optionTwo.text}
-                       
-                    </div>
+                        
                 </div>
                 <h3 className="radiobuttons">
                     My answer: {userChoiceO ? optionOne.text : optionTwo.text}
                 </h3>
-                <p className="radiobuttons">
-                    <div>Users Votes: {userChoiceO ? optionOne.votes.length : optionTwo.votes.length}</div>
+                <div >
+                <div className="radiobuttonsfirst" >
+                    <div>Users Votes first option: {optionOne.votes.length}</div>
                     <div >This Vote Percentage:
                          
-                        {userChoiceO ? 
+                        {
                             (Math.round((optionOne.votes.length / total) * 100))
-                            : 
-                            (Math.round((optionTwo.votes.length / total) * 100))
                             }{" "}
                             %
                     </div>
-                </p>
+                </div>
+                <div className="radiobuttonssec" >
+                    <div>Users Votes second option: { optionTwo.votes.length}</div>
+                    <div >This Vote Percentage:
+                        {
+                            (Math.round((optionTwo.votes.length / total) * 100))
+                        }{" "}
+                        %
+                    </div>
+                </div>
+                </div>
             </div>
             <div className="dn-author">
                 <Author name={name} date={date} avatar={avatar} />

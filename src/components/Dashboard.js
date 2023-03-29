@@ -57,7 +57,7 @@ const Dashboard = (props) => {
         </button>
       </h1>
 
-      <li>
+      <ul>
         {dispQuestions.length > 0 ? 
           dispQuestions.map((q) => (
             <li key={q.id}>
@@ -72,7 +72,7 @@ const Dashboard = (props) => {
             
           </div>
         }
-      </li>
+      </ul>
     </div>
   )
 

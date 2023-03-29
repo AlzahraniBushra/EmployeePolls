@@ -23,30 +23,30 @@ const UnDonePoll = (props) => {
 
 
     return (
-        <div >
+        
             <div className="undnPolls" >
                 <h1 className="center"> Would you rather </h1>
                 <div data-testid="test-radiobuttons"
                     className="radiobuttons"
                     onChange={usersVote}>
-                    <div >
+                    
                         <input type="radio" name="options" value="optionOne" />
                         {optionOne.text}
                         <p> or</p>
-                    </div>
+                    
                     {" "}
-                    <div >
+                    
                         <input type="radio" name="options" value="optionTwo" />
                         {optionTwo.text}
                         <p> ?</p>
-                    </div>
+                    
 
                 </div>
                 <div className="author" >
                     <Author name={name} date={date} avatar={avatar} />
                 </div>
             </div>
-        </div>
+        
     );
 };
 

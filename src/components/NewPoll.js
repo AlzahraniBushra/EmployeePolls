@@ -12,8 +12,9 @@ const NewPoll = (props) => {
     optionOneText: '',
     optionTwoText: '',
   }
+  
   const [question, setQuestion] = useState(inQuestionOb)
-
+  
 
 
   const handleInputChange = (e) => {
@@ -21,13 +22,15 @@ const NewPoll = (props) => {
     setQuestion({ ...question, [name]: value })
   }
 
+
+
   const handleSubmit = (e) => {
 
     e.preventDefault();
-    dispatch(handleSaveQuestion(question));
+    dispatch(handleSaveQuestion(question)).then(() => {
     setQuestion(inQuestionOb);
-      navigate('/');
-    
+    navigate('/');
+    });
   }
 
 
